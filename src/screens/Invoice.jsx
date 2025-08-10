@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import React from 'react';
 import { BackArrowOutlinedSvg } from '../assets/svg';
-import InvoiceCard from '../components/InvoiceCard';
+import InvoiceTaxeCard from '../components/InvoiceTaxeCard';
 
 const Invoice = ({ navigation }) => {
   const invoiceData = [
@@ -41,7 +41,7 @@ const Invoice = ({ navigation }) => {
       <View className='mb-10'>
         {invoiceData.map((item, index) => (
           <View key={index}>
-            <InvoiceCard item={item} />
+            <InvoiceTaxeCard item={item} />
           </View>
         ))}
       </View>

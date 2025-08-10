@@ -33,6 +33,8 @@ const Payout = ({ navigation }) => {
 
   return (
     <ScrollView className="flex-1 bg-[#ECECEC]">
+      
+      {/* Header Section */}
       <View className="flex-row items-center bg-white px-5 py-5">
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <BackArrowOutlinedSvg />
@@ -42,6 +44,7 @@ const Payout = ({ navigation }) => {
         </Text>
       </View>
 
+      {/* Payout Details */}
       <View className='mb-10'>
         {payoutDetails.map((item, index) => (
           <View key={index}>

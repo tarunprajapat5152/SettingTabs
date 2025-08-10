@@ -6,11 +6,12 @@ const CustomBotton = ({
   title = '',
   textColor = 'text-white',
   style = 'bg-[#268F8C]',
+  marginX = 'mx-5',
   onPress = () => {}
 }) => {
   return (
     <TouchableOpacity
-      className={`mx-5 my-3 flex-row items-center justify-center rounded-full ${style} py-5`}
+      className={`${marginX} my-3 flex-row items-center justify-center rounded-full ${style} py-5`}
       onPress={onPress}
     >
       {item && <item.icon />}

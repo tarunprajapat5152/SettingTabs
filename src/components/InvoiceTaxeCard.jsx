@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import CustomBotton from './CustomBotton';
 import InvoiceDownloadModal from './InvoiceDownloadModal';
 
-const InvoiceCard = ({ item }) => {
+const InvoiceTaxeCard = ({ item }) => {
   const [showInvoiceModal, setShowInvoiceModal] = useState(false);
 
   return (
@@ -37,10 +37,10 @@ const InvoiceCard = ({ item }) => {
       </View>
 
       {showInvoiceModal && <View>
-        <InvoiceDownloadModal />
+        <InvoiceDownloadModal setShowInvoiceModal={setShowInvoiceModal} />
       </View>}
     </View>
   );
 };
 
-export default InvoiceCard;
+export default InvoiceTaxeCard;

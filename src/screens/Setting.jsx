@@ -5,15 +5,15 @@ import { BackArrowOutlinedSvg, RightArrowSvg } from '../assets/svg';
 const sections = [
   {
     title: 'Settings',
-    items: [{ title: 'Scheduling Time' }, { title: 'Notification' }],
+    items: [{ title: 'Scheduling Time', link: 'NotificationSetting' }, { title: 'Notification', link: 'NotificationSetting' }],
   },
   {
     title: 'Orders',
-    items: [{ title: 'Order History' }, { title: 'Customer Complaints' }],
+    items: [{ title: 'Order History', link: 'NotificationSetting' }, { title: 'Customer Complaints', link: 'CustomerComplaint' }],
   },
   {
     title: 'Business',
-    items: [{ title: 'Payouts' }, { title: 'Invoices' }, { title: 'Taxes' }],
+    items: [{ title: 'Payouts', link: 'Payout' }, { title: 'Invoices', link: 'Invoice' }, { title: 'Taxes', link: 'Taxe' }],
   },
   {
     title: 'Analytics',
@@ -22,12 +22,12 @@ const sections = [
   {
     title: 'Help Center',
     items: [
-      { title: 'FAQ' },
-      { title: 'Contact & Support' },
-      { title: 'Submit A Request' },
-      { title: 'User Guide & Tutorials' },
-      { title: 'System Status' },
-      { title: 'Feedback & Suggestion' },
+      { title: 'FAQ', link: 'FAQ' },
+      { title: 'Contact & Support', link: 'ContactSupport' },
+      { title: 'Submit A Request', link: 'SubmitARequest' },
+      { title: 'User Guide & Tutorials', link: 'ContactSupport' },
+      { title: 'System Status', link: 'ContactSupport' },
+      { title: 'Feedback & Suggestion', link: 'ContactSupport' },
     ],
   },
 ];
@@ -55,7 +55,7 @@ const Setting = ({ navigation }) => {
           {item.items.map((item, index) => (
             <TouchableOpacity
               key={index}
-              onPress={() => navigation.navigate('Invoice')}
+              onPress={() => navigation.navigate(item?.link)}
             >
               <View className="flex-row items-center justify-between py-2">
                 <Text className="font-proxima-nova-bold text-xl text-[#3C3A45]">
