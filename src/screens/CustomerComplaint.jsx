@@ -124,11 +124,13 @@ const CustomerComplaint = ({ navigation }) => {
       </View>
 
       {/* Complaint Card */}
-      {complaintData.map((item, index) => (
-        <View key={index}>
-          <CustomerComplaintCard item={item} />
-        </View>
-      ))}
+      <View className='mb-7'>
+        {complaintData.map((item, index) => (
+          <View key={index}>
+            <CustomerComplaintCard item={item} />
+          </View>
+        ))}
+      </View>
     </ScrollView>
   );
 };
